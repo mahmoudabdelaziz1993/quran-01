@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import localFont from 'next/font/local'
+
+// import { Amiri_Quran } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+// const ArbicSans = Amiri_Quran({
+//   subsets: ["arabic"],
+//   variable: "--font-arabic-sans",
+//   weight: ["400"],
+// })
+const ArbicSans = localFont({
+  src: "./fonts/KFGQPC Uthmanic Script HAFS Regular.otf",
+  variable: "--font-arabic-sans",
   weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+})
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ArbicSans.className} antialiased bg-stone-50 dark:bg-stone-950`}
       >
         {children}
       </body>
