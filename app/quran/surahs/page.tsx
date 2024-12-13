@@ -19,11 +19,11 @@ export default async function Surahs() {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7 9V7h14v2zm0 4v-2h14v2zm0 4v-2h14v2zM4 9q-.425 0-.712-.288T3 8t.288-.712T4 7t.713.288T5 8t-.288.713T4 9m0 4q-.425 0-.712-.288T3 12t.288-.712T4 11t.713.288T5 12t-.288.713T4 13m0 4q-.425 0-.712-.288T3 16t.288-.712T4 15t.713.288T5 16t-.288.713T4 17" /></svg>
                 </PageHeader>
 
-                <div className="relative w-full h-[calc(100vh-80px)] max-w-screen-sm  shadow-lg overflow-hidden rounded-lg bg-stone-50 dark:bg-stone-950 mx-auto text-stone-950 dark:text-stone-50 px-2">
+                <div className="relative w-full h-[calc(100vh-80px)] max-w-screen-sm  shadow-lg overflow-hidden rounded-lg bg-stone-50 dark:bg-stone-950 mx-auto text-stone-700 dark:text-stone-300 px-2">
                     {" "}
                     <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-stone-50 dark:from-stone-950 to-transparent z-10"></div>{" "}
                     <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-stone-50 dark:from-stone-950 to-transparent z-10"></div>
-                    <ul className="relative w-full flex flex-col gap-5 pb-8 mt-5 h-[calc(100vh-80px)] overflow-y-auto scrollbar-hide">
+                    <ul className="relative w-full flex flex-col gap-5 py-8  h-[calc(100vh-80px)] overflow-y-auto scrollbar-hide bg-stone-100 dark:bg-stone-900">
                         {" "}
                         {surahs.map((surah: Surah) => (
                             <li
