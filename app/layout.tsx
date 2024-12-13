@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body
         className={`${ArbicSans.className} antialiased bg-stone-50 dark:bg-stone-950`}
       >
