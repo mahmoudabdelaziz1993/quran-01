@@ -1,5 +1,6 @@
-import PageHeader from "./page-header";
-import VerticalScrollParagraph from "./vertical-scroll-paragraph";
+import PageHeader from "../../../components/page-header";
+import VerticalScrollParagraph from "../../../components/vertical-scroll-paragraph";
+
 
 type props = {
     surahNameArabic: string;
@@ -10,7 +11,7 @@ export default function PageMock({ ayahArrAR, surahNameArabic, surahNo }: props)
     return (
         <>
 
-            <div className="flex flex-col  w-full h-full max-w-screen-sm max-h-svh mx-auto bg-stone-50 dark:bg-stone-950  text-stone-700 dark:text-stone-300 py-2">
+            <div className="flex flex-col  w-full h-full max-w-screen-sm max-h-svh mx-auto bg-stone-50 dark:bg-stone-950  text-stone-700 dark:text-stone-300 px-2">
                 <PageHeader surahNameArabic={surahNameArabic} href={`/quran/surahs/`} />
                 <VerticalScrollParagraph>
                     {ayahArrAR.map((ayah, i: number) => (

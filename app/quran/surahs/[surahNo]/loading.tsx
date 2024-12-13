@@ -1,5 +1,6 @@
-import PageHeader from "./components/page-header";
-import VerticalScrollParagraph from "./components/vertical-scroll-paragraph";
+import PageHeader from "../../components/page-header";
+import VerticalScrollParagraph from "../../components/vertical-scroll-paragraph";
+
 
 export default function Loading() {
     return (

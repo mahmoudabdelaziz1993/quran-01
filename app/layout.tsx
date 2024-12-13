@@ -4,12 +4,12 @@ import localFont from 'next/font/local'
 // import { Amiri_Quran } from 'next/font/google';
 import "./globals.css";
 
-// const ArbicSans = Amiri_Quran({
+// const ArabicSans = Amiri_Quran({
 //   subsets: ["arabic"],
 //   variable: "--font-arabic-sans",
 //   weight: ["400"],
 // })
-const ArbicSans = localFont({
+const ArabicSans = localFont({
   src: "./fonts/KFGQPC Uthmanic Script HAFS Regular.otf",
   variable: "--font-arabic-sans",
   weight: "100 900",
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={`${ArbicSans.className} antialiased bg-stone-50 dark:bg-stone-950`}
+        className={`${ArabicSans.className} antialiased bg-stone-50 dark:bg-stone-950`}
       >
         {children}
       </body>

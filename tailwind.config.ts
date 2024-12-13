@@ -8,10 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      fontFamily: { arabic: ['"KFGQPC Uthmanic Script HAFS Regular"', 'sans-serif'], },
+      lineHeight: { 'extra-loose': '2.5', '12': '3rem', },
+      letterSpacing: { wider: '.05em', widest: '.1em', },
     },
   },
   plugins: [],

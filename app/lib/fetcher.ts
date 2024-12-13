@@ -32,7 +32,9 @@ export async function fetcher<T>(url: string, options: RequestInit = {}): Promis
                     errorMsg = 'There was an unexpected error. Please try again later.';
                     break;
             }
-            throw new Error(errorMsg);
+            throw new Error(errorMsg, {
+                cause: errorMsg
+            });
         }
 
         return await res.json() as T;
@@ -40,12 +42,12 @@ export async function fetcher<T>(url: string, options: RequestInit = {}): Promis
         if (error instanceof Error) {
             return Promise.reject({
                 message: error.message,
-                status: 'unknown'
+
             });
         } else {
             return Promise.reject({
                 message: 'An unexpected error occurred',
-                status: 'unknown'
+
             });
         }
     }
