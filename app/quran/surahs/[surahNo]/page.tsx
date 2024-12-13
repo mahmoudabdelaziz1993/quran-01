@@ -28,5 +28,5 @@ export default async function Surah({
     console.log("surah", surah);
 
     return (
-        <PageMock surahNameArabic={surah.surahNameArabic} ayahArrAR={surah.arabic1} surahNo={surah.surahNo} />)
+        <PageMock surahNameArabic={surah.surahNameArabicLong} ayahArrAR={surah.arabic1} surahNo={surah.surahNo} />)
 }
