@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body
-        className={`${ArabicSans.className} antialiased bg-stone-50 dark:bg-stone-950`}
+        className={`${ArabicSans.className} antialiased bg-zinc-50 dark:bg-zinc-950`}
       >
         {children}
       </body>
