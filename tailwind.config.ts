@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import tailwindcssMotion from 'tailwindcss-motion';
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,5 +13,6 @@ export default {
       letterSpacing: { wider: '.05em', widest: '.1em', },
     },
   },
-  plugins: [],
+
+  plugins: [tailwindcssMotion],
 } satisfies Config;
