@@ -15,25 +15,20 @@ export default function Ayah({
 }) {
   const [controlPanel, setControlPanel] = useState(false);
   return (
-    <a
-      id={`${surahNo}-${ayahNo}`}
-      className=" pb-2 group cursor-pointer relative"
-      key={`${surahNo}-${ayahNo}`}
-      onClick={() => setControlPanel(!controlPanel)}
-    >
-      <div
-        className={`  fixed top-0 left-0  grid place-items-center w-screen h-screen bg-zinc-50/10 dark:bg-zinc-950/5 backdrop-blur-sm z-10`}
+    <>
+     <div
+        className={`  fixed top-0 left-0  ${controlPanel ? "" : "hidden"} grid place-items-center w-screen h-screen bg-zinc-50/10 dark:bg-zinc-950/5 backdrop-blur-sm z-10`}
       >
-        <div className="grid bg-zinc-50  dark:bg-zinc-950
- gap-4 max-w-screen-lg mx-auto  p-4 place-items-center text-center ">
+        <div className="grid bg-zinc-50  dark:bg-zinc-950 rounded-xl
+ gap-4  max-w-screen-sm w-full mx-auto  p-8 place-items-center text-center  ">
         <div className="flex w-full">
             <IconButton onClick={() => setControlPanel(false)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m8 8l32 32M8 40L40 8"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="m8 8l32 32M8 40L40 8"/></svg>
             </IconButton>
         </div>
         <div className="p-2  flex gap-4 items-center">
         
-            <p className="lg:text-3xl text-2xl font-semibold">
+            <p className="lg:text-4xl text-2xl font-semibold p-4 leading-extra-loose">
                 {ayahString}
             </p>
         </div>
@@ -60,10 +55,19 @@ export default function Ayah({
         </div>
         </div>
       </div>
+      <a
+      id={`${surahNo}-${ayahNo}`}
+      className=" pb-2 group cursor-pointer relative"
+      key={`${surahNo}-${ayahNo}`}
+      onClick={() => setControlPanel(!controlPanel)}
+    >
+     
 
       <span className="group-hover:bg-zinc-300 dark:group-hover:bg-zinc-700 transition duration-75 ease-in-out delay-300 rounded-md select-text">
         {ayahString}
       </span>
     </a>
+      </>
+    
   );
 }
