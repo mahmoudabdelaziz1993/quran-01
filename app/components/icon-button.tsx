@@ -11,10 +11,9 @@ export default function IconButton({
 }) {
     return (
         <button
-            className={`p-2 [&_svg]:size-4 rounded-full text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800 ${className}`}
+            className={`rounded-full size-12hover:bg-zinc-300  dark:hover:bg-zinc-600 focus:outline-none focus:ring active:bg-zinc-500 ring-current  grid place-items-center [&>svg]:size-6 p-2 ${className}`}
             onClick={() => onClick()}
         >
-            {label && <span className="sr-only">{label}</span>}
             {children}
         </button>
     )
