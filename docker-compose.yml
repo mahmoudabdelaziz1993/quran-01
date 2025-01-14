@@ -1,0 +1,25 @@
+services:
+  # Development
+  dev:
+    build:
+      context: .
+      target: development # Use the development stage
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: yarn dev
+
+  # Production
+  prod:
+    build:
+      context: .
+      target: production # Use the production stage
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    command: yarn start
